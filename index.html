@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Diário de Bordo</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2b2f6b">
+    <link rel="icon" type="image/png" href="icons/icon-1.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="icons/icon-2.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <h1>Diário de Bordo</h1>
+        <button id="installBtn" class="install-btn" aria-hidden="true">Instalar</button>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <form id="entryForm" autocomplete="off">
+                <label>
+                    Título
+                    <input id="title" name="title" type="text" required maxlength="100"
+                        placeholder="Ex: Reunião com equipe" />
+                </label>
+
+                <label>
+                    Data
+                    <input id="date" name="date" type="date" required />
+                </label>
+
+                <label>
+                    Descrição
+                    <textarea id="description" name="description" rows="4" maxlength="1000"
+                        placeholder="O que aconteceu..."></textarea>
+                </label>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Salvar entrada</button>
+                    <button type="button" id="clearBtn" class="btn-secondary">Limpar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Entradas</h2>
+            <ul id="entriesList" class="entries-list" aria-live="polite"></ul>
+            <p id="emptyMsg" class="empty-msg">Nenhuma entrada registrada.</p>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <small>Diário de Bordo — PWA simples • Dados locais (localStorage)</small>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>
