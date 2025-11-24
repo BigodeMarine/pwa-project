@@ -16,7 +16,7 @@ PWA (Manifest + Service Worker) — instalação e funcionamento offline
 
 HTTP-Server — utilizado para rodar o projeto localmente (necessário para PWA funcionar)  
 
-📦 Como Rodar o Projeto Localmente
+📦 Como Rodar o Projeto Localmente  
 ✔ 1. Clone o repositório  
 git clone https://github.com/BigodeMarine/pwa-project.git  
 
